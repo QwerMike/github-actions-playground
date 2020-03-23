@@ -37,4 +37,4 @@ jobs:
     
     - name: Run script if any previous step failed
       if: failure()
-      run: echo What's up, Error!
+      run: echo "What's up, Error!"
