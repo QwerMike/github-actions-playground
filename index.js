@@ -11,11 +11,8 @@ try {
     let env = process.env;
 
     console.log('=========');
-    console.log(env['INPUT_who-to-greet'.toUpperCase()]);
-
-    for (var property in env) {
-        console.log(property + ': ' + env[property]);
-    }
+    console.log(env);
+    console.log(env['INPUT_who-to-greet'.toUpperCase()]);    
 
 } catch (error) {
     core.setFailed(error.message);

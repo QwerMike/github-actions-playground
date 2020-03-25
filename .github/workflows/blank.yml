@@ -24,7 +24,7 @@ jobs:
     
     - name: Hello world action step
       id: hello
-      uses: actions/hello-world-javascript-action@v1
+      uses: ./ # Uses an action in the root directory
       with:
         who-to-greet: 'Mona the Octocat'
     
