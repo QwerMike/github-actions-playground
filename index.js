@@ -13,8 +13,7 @@ try {
 
     // try to get "steps"
     // otherwise pass it through the input
-    console.log(
-        process.env);
+    console.log(JSON.stringify(process.env));
 
 } catch (error) {
     core.setFailed(error.message);
