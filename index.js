@@ -7,13 +7,15 @@ try {
     console.log(`Hello ${nameToGreet}!`);
     const time = (new Date()).toTimeString();
     core.setOutput("time", time);
-    // Get the JSON webhook payload for the event that triggered the workflow
-    const payload = JSON.stringify(github.context.payload, undefined, 2)
-    console.log(`The event payload: ${payload}`);
+    
+    let env = process.env;
 
-    // try to get "steps"
-    // otherwise pass it through the input
-    console.dir(process.env);
+    console.log('=========');
+    console.log(env['INPUT_who-to-greet'.toUpperCase()]);
+
+    for (var property in env) {
+        console.log(property + ': ' + env[property]);
+    }
 
 } catch (error) {
     core.setFailed(error.message);
