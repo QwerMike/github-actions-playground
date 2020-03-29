@@ -48,3 +48,10 @@ jobs:
     - name: Run script if any previous step failed
       if: failure()
       run: echo "What's up, Error!"
+    
+    - name: Check steps context if failure
+      if: failure()
+      uses: ./
+      with:
+        who-to-greet: 'THE END'
+        steps-context: ${{ toJson(steps) }}
