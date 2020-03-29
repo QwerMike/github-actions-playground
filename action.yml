@@ -5,6 +5,10 @@ inputs:
     description: 'Who to greet'
     required: true
     default: 'World'
+  steps-context: # id of input
+    description: 'Contains steps info'
+    required: true
+    default: ''
 outputs:
   time: # id of output
     description: 'The time we greeted you'

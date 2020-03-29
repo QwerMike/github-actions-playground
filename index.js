@@ -12,7 +12,11 @@ try {
 
     console.log('=========');
     console.log(env);
-    console.log(env['INPUT_who-to-greet'.toUpperCase()]);    
+    console.log(env['INPUT_who-to-greet'.toUpperCase()]);
+
+    let steps = core.getInput('steps-context');
+    console.log('=========');
+    console.log(steps);
 
 } catch (error) {
     core.setFailed(error.message);
