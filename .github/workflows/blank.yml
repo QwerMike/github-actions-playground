@@ -25,11 +25,8 @@ jobs:
     - name: Script to list files
       run: ls -al $GITHUB_WORKSPACE
     
-    - name: Hello world action step with $GITHUB_WORKSPACE
-      uses: ./ # Uses an action in the root directory
-      with:
-        who-to-greet: $GITHUB_WORKSPACE
-        steps-context: ${{ toJson(steps) }}
+    - name: Script to show $GITHUB_WORKSPACE
+      run: echo $GITHUB_WORKSPACE
     
     - name: Hello world action step
       id: hello
