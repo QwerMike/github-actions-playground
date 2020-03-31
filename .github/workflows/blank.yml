@@ -22,6 +22,9 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
     
+    - name: Script to list files
+      run: ls -al /github/workspace
+    
     - name: Hello world action step
       id: hello
       uses: ./ # Uses an action in the root directory
